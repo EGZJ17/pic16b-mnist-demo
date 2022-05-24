@@ -1,6 +1,6 @@
 html {
     font-family: Avenir;
-    background: #34d3eb;
+    background: rgb(82, 207, 235);
     padding: 1rem;
 }
 
@@ -27,7 +27,7 @@ hr {
 }
 
 nav {
-    background: #34d3eb;
+    background: rgb(82, 207, 235);
     padding: 0 0.5rem;
     border-radius: 25px;
 }
