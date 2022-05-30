@@ -23,10 +23,11 @@ def ask():
     if request.method == 'GET':
         return render_template('ask.html')
     else:
+        #function to store the imputs 
         try:
-            return render_template('ask.html', name=request.form['name'], student=request.form['student'])
+            return render_template('ask.html', thanks=True)
         except:
-            return render_template('ask.html')
+            return render_template('ask.html', error=True)
 #######
 
 ####### group exercise
