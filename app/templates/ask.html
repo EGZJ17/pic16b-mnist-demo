@@ -6,38 +6,148 @@
 
 {% block content %}
   <form method="post">
-      <label for="name">First Name:</label>
-      <input name="name" id="name">
+      <label for="first_name">First Name:</label>
+      <input type="text" name="first_name" id="first_name">
       <br>
-      <label for="name">Last Name:</label>
-      <input name="name" id="name">
+      <label for="last_name">Last Name:</label>
+      <input type="text" name="last_name" id="last_name">
       <br>
-      <label for="name">e-mail:</label>
-      <input name="name" id="name">
+      <label for="location">Location (city, STATE):</label>
+      <input type="text" name="location" id="location">
       <br>
-      <label for="name">GPA:</label>
-      <input name="name" id="name">
+      <label for="phone">Phone number:</label>
+      <input type="text" name="phone" id="phone">
       <br>
-      <label for="name">Education:</label>
-      <input name="name" id="name">
+      <label for="email">e-mail:</label>
+      <input type="text" name="email" id="email">
       <br>
-      <label for="name">Experience:</label>
-      <input name="name" id="name">
+
+
+      <label for="school1">First school:</label>
+      <input type="text" name="school1" id="school1">
       <br>
-      <label for="pic16b">Which template do you prefer?</label>
-      <input type="radio" name="student" id="yes" value="yes">
-      <label for="yes">1</label>
-      <input type="radio" name="student" id="no" value="no">
-      <label for="No">2</label>
+      <label for="school1startdate">Starting Date:</label>
+      <input type="text" name="school1startdate" id="school1startdate">
+      <br>
+      <label for="school1enddate">Ending Date:</label>
+      <input type="text" name="school1enddate" id="school1enddate">
+      <br>
+      <label for="school1GPA">GPA:</label>
+      <input type="text" name="school1GPA" id="school1GPA">
+      <br>
+      <label for="school1Relevant_Courses">Relevant Courses:</label>
+      <input type="text" name="school1Relevant_Courses" id="school1Relevant_Courses">
+      <br>
+
+      <label for="school2">Second school:</label>
+      <input type="text" name="school2" id="school2">
+      <br>
+      <label for="school2startdate">Starting Date:</label>
+      <input type="text" name="school2startdate" id="school2startdate">
+      <br>
+      <label for="school2enddate">Ending Date:</label>
+      <input type="text" name="school2enddate" id="school2enddate">
+      <br>
+      <label for="school2GPA">GPA:</label>
+      <input type="text" name="school2GPA" id="school2GPA">
+      <br>
+      <label for="school2Relevant_Courses">Relevant Courses:</label>
+      <input type="text" name="school2Relevant_Courses" id="school2Relevant_Courses">
+      <br>
+      
+
+
+      <label for="company1">Company/ Organization Name:</label>
+      <input type="text" name="company1" id="company1">
+      <br>
+      <label for="company1position">Job Title/Position:</label>
+      <input type="text" name="company1position" id="company1position">
+      <br>
+      <label for="company1startdate">Starting Date:</label>
+      <input type="text" name="company1startdate" id="company1startdate">
+      <br>
+      <label for="company1enddate">Ending Date:</label>
+      <input type="text" name="company1enddate" id="company1enddate">
+      <br>
+      <label for="company1experience1">Work Experience (first bullet point):</label>
+      <input type="text" name="company1experience1" id="company1experience1">
+      <br>
+      <label for="company1experience2">Work Experience (second bullet point):</label>
+      <input type="text" name="company1experience2" id="company1experience2">
+      <br>
+      <label for="company1experience3">Work Experience (third bullet point):</label>
+      <input type="text" name="company1experience3" id="company1experience3">
+      <br>
+
+      <label for="company2">Company/ Organization Name:</label>
+      <input type="text" name="company2" id="company2">
+      <br>
+      <label for="company2position">Job Title/Position:</label>
+      <input type="text" name="company2position" id="company2position">
+      <br>
+      <label for="company2startdate">Starting Date:</label>
+      <input type="text" name="company2startdate" id="company2startdate">
+      <br>
+      <label for="company2enddate">Ending Date:</label>
+      <input type="text" name="company2enddate" id="company2enddate">
+      <br>
+      <label for="company2experience1">Work Experience (first bullet point):</label>
+      <input type="text" name="company2experience1" id="company2experience1">
+      <br>
+      <label for="company2experience2">Work Experience (second bullet point):</label>
+      <input type="text" name="company2experience2" id="company2experience2">
+      <br>
+      <label for="company2experience3">Work Experience (third bullet point):</label>
+      <input type="text" name="company2experience3" id="company2experience3">
+      <br>
+
+
+      <label for="company3">Company/ Organization Name:</label>
+      <input type="text" name="company3" id="company3">
+      <br>
+      <label for="company3position">Job Title/Position:</label>
+      <input type="text" name="company3position" id="company3position">
+      <br>
+      <label for="company3startdate">Starting Date:</label>
+      <input type="text" name="company3startdate" id="company3startdate">
+      <br>
+      <label for="company3enddate">Ending Date:</label>
+      <input type="text" name="company3enddate" id="company3enddate">
+      <br>
+      <label for="company3experience1">Work Experience (first bullet point):</label>
+      <input type="text" name="company3experience1" id="company3experience1">
+      <br>
+      <label for="company3experience2">Work Experience (second bullet point):</label>
+      <input type="text" name="company3experience2" id="company3experience2">
+      <br>
+      <label for="company3experience3">Work Experience (third bullet point):</label>
+      <input type="text" name="company3experience3" id="company3experience3">
+      <br>
+
+
+
+
+
+
+
+
+      <label for="template">Which template do you prefer?</label>
+      <input type="radio" name="template" id="1" value="1">
+      <label for="1">1</label>
+      <input type="radio" name="template" id="2" value="2">
+      <label for="2">2</label>
       <br>
       <input type="submit" value="Submit form">
   </form>
-  {% if name %}
+
+  {% if thanks %}
   <br>
-  {% if student == "yes" %}
-  <b>Hello {{name}}!  Do you like PIC16B?</b>
-  {% else %}
-  <b>Hello {{name}}!  Do you want to take PIC16B?</b>
-  {% endif %}
-  {% endif %}
+  Thanks for submitting the form! 🎉
+{% endif %}
+
+{% if error %}
+  <br>
+  Oh no, we couldn't submit that form! Please try again and make sure to not leave the * sections blank.
+{% endif %}
+
 {% endblock %}
