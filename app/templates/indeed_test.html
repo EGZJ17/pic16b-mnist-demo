@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 
-<title>This is to test our indeed scraper!</title>
+{% block header %}
+  <h1>{% block title %} This is to test our indeed scraper!{% endblock %}</h1>
+{% endblock %}
 
-
+{% block content %}
 <p>Hello!</p>
 
 <p>Press this button to recieve some job applications</p>
 
 <input type="submit" value="Submit form">
+
+{% endblock %}

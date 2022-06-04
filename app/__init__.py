@@ -49,6 +49,6 @@ def submit_basic():
 # plotly: https://towardsdatascience.com/web-visualization-with-plotly-and-flask-3660abf9c946
 
 @app.route('/submit-advanced/', methods=['POST', 'GET'])
-def submit():
+def submit_advanced():
     pass
 
