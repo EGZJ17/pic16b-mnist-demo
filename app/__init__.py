@@ -18,26 +18,26 @@ app = Flask(__name__)
 def main():
     return render_template('main_better.html')
 
-@app.route('/ask/', methods=['POST', 'GET'])
+@app.route('/form/', methods=['POST', 'GET'])
 def ask():
     if request.method == 'GET':
-        return render_template('ask.html')
+        return render_template('form.html')
     else:
         #function to store the imputs 
         try:
-            return render_template('ask.html', thanks=True)
+            return render_template('form.html', thanks=True)
         except:
-            return render_template('ask.html', error=True)
+            return render_template('form.html', error=True)
 #######
 
-####### group exercise
-@app.route('/hello/')
-def hello():
-    return render_template('hello.html')
+@app.route('/indeed_test/', methods=['POST', 'GET'])
+def submit():
+    return render_template('indeed_test.html')
 
-@app.route('/hello/<name>')
-def hello_name(name):
-    return render_template('hello.html', name=name)
+####### group exercise
+@app.route('/about/')
+def hello():
+    return render_template('about.html')
 
 #######
 # Request object: https://flask.palletsprojects.com/en/2.1.x/api/#flask.Request
@@ -51,3 +51,4 @@ def submit_basic():
 @app.route('/submit-advanced/', methods=['POST', 'GET'])
 def submit():
     pass
+
