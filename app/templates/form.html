@@ -5,6 +5,17 @@
 {% endblock %}
 
 {% block content %}
+
+{% if thanks %}
+  <br>
+  Thanks for submitting the form! 🎉
+{% endif %}
+
+{% if error %}
+  <br>
+  Oh no, we couldn't submit that form! Please try again and make sure to not leave the * sections blank.
+{% endif %}
+
   <form method="post">
 
       <h2>Contact Information</h2>
@@ -173,14 +184,6 @@
       <input type="submit" value="Submit form">
   </form>
 
-  {% if thanks %}
-  <br>
-  Thanks for submitting the form! 🎉
-{% endif %}
 
-{% if error %}
-  <br>
-  Oh no, we couldn't submit that form! Please try again and make sure to not leave the * sections blank.
-{% endif %}
 
 {% endblock %}
