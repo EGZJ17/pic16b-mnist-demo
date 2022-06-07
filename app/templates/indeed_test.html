@@ -5,10 +5,19 @@
 {% endblock %}
 
 {% block content %}
-<p>Hello!</p>
+    <p>Hello!</p>
 
-<p>Press this button to recieve some job applications</p>
+    <p>Press this button to recieve some job applications</p>
 
-<input type="submit" value="Submit form">
+    <input type="submit" value="Submit form">
 
+    {% if source %}
+    Thanks for testing! This is the {{source}}
+    {% endif %}
+
+    {% if error %}
+    <br>
+    Oh no, something went wrong!
+    {% endif %}
+    
 {% endblock %}

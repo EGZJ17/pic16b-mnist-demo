@@ -1,13 +1,8 @@
 from flask import Flask, g, render_template, request
 from flask import redirect, url_for, abort
 
-import sklearn as sk
-import matplotlib.pyplot as plt
-import numpy as np
-import pickle
-
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-from matplotlib.figure import Figure
+from selenium import webdriver
+import os
 
 import io
 import base64
@@ -99,7 +94,21 @@ def result():
 
 @app.route('/indeed_test/', methods=['POST', 'GET'])
 def submit():
-    return render_template('indeed_test.html')
+    if request.method == 'GET':
+        return render_template('indeed_test.html')
+    else:
+        try:
+            chrome_options = webdriver.ChromeOptions()
+            chrome_options.add_argument("--headless")
+            chrome_options.add_argument("--disable-dev-shm-usage")
+            chrome_options.add_argument("--no-sandbox")
+            chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+            driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+            driver.get("https://medium.com")
+            source = driver.page_source
+            return render_template('indeed_test.html', source=source)
+        except:
+            return render_template('indeed_test.html', error=True)
 
 ####### group exercise
 @app.route('/about/')
