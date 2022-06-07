@@ -1,4 +1,5 @@
 from flask import Flask, g, render_template, request
+from flask import redirect, url_for, abort
 
 import sklearn as sk
 import matplotlib.pyplot as plt
@@ -19,21 +20,16 @@ def main():
     return render_template('main_better.html')
 
 
-@app.route('/form/')
+@app.route('/form/', methods=['POST', 'GET'])
 def ask():
-    return render_template('form.html')
-
- 
-# @app.route('/form/', methods=['POST', 'GET'])
-# def ask():
-#     if request.method == 'GET':
-#         return render_template('form.html')
-#     else:
-#         #function to store the imputs 
-#         try:
-#             return render_template('form.html', thanks=True)
-#         except:
-#             return render_template('form.html', error=True) 
+    if request.method == 'GET':
+        return render_template('form.html')
+    else:
+        #function to store the imputs 
+        try:
+            return redirect(url_for('resume'))
+        except:
+            return render_template('form.html', error=True) 
 #######
 
 @app.route('/resume/', methods=['POST'])
