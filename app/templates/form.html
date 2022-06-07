@@ -16,8 +16,7 @@
   Oh no, we couldn't submit that form! Please try again and make sure to not leave the * sections blank.
 {% endif %}
 
-  <form method="post">
-
+  <form method="post" action="{{ url_for('resume') }}">
       <h2>Contact Information</h2>
 
       <label for="first_name">First Name:</label>
@@ -181,7 +180,7 @@
       <input type="radio" name="template" id="2" value="2">
       <label for="2">2</label>
       <br>
-      <input type="submit" value="Submit form">
+      <center><input type="submit" /></center>
   </form>
 
 
