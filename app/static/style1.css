@@ -31,7 +31,7 @@
   .header {
     margin-bottom: 30px }
 
-    .full-name {
+    .header.full-name {
         font-size: 40px;
         text-transform: uppercase;
         margin-bottom: 5px;
@@ -40,15 +40,15 @@
     
 
     
-    .first-name {
+    .header.first-name {
       font-weight: 700;
     }
     
-    .last-name {
+    .header.last-name {
       font-weight: 300;
     }
     
-    .contact-info {
+    .header.contact-info {
       margin-bottom: 20px;
     }
     
