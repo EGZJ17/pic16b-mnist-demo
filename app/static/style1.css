@@ -29,13 +29,16 @@
   }
   
   .header {
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px }
+
     .full-name {
-      font-size: 40px;
-      text-transform: uppercase;
-      margin-bottom: 5px;
-    }
+        font-size: 40px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+
+    
+
     
     .first-name {
       font-weight: 700;
@@ -68,7 +71,7 @@
       margin-right: 10px;
       text-decoration: underline;
     }
-  }
+  
   
   
   .details {
