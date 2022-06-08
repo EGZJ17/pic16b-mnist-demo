@@ -140,8 +140,6 @@ def submit():
         except:
             return render_template('indeed_test.html', error = True)
 
-
-
 @app.route('/about/')
 def hello():
     return render_template('about.html')

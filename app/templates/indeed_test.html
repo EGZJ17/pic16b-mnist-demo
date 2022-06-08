@@ -3,20 +3,18 @@
 <style>
     table {
       font-family: arial, sans-serif;
-      border-collapse: collapse;
       width: 100%;
     }
-    
     td, th {
-      border: 1px solid #dddddd;
+      border: 1px solid #ffffff;
       text-align: left;
-      padding: 8px;
+      padding: 15px;
     }
-    
+    tr:hover {background-color: coral;}
     tr:nth-child(even) {
-      background-color: #eca9a9;
+      background-color: #ffffff;
     }
-    </style>
+</style>
 
 {% block header %}
   <h1>{% block title %} If You Need A Jumpstart on Your Job Search!{% endblock %}</h1>
@@ -27,19 +25,42 @@
 
     <p>Fill out this form to get some job recommendations with your new resume!!</p>
 
-
     <form method="post" enctype="multipart/form-data">
         <label for="job">Desired job:</label><br>
-        <input type="text" name="job" id="user_job"> <br>
+        <input style="
+        width: 10%;
+        padding: 0px;
+        position: absolute;
+        left: 15%;"type="text" name="job" id="user_job"> <br>
         <label for="location">Desired location:</label><br>
-        <input type="text" name="location" id="user_location"> <br><br>
+        <input style="
+        width: 10%;
+        padding: 0px;
+        position: absolute;
+        left: 15%;"type="text" type="text" name="location" id="user_location"> <br><br>
         <input type="submit" value="Click Me!"> 
     </form>
 
     {% if current_url %}
 
     <p>
-    <center> Wow! Here are the results for {{user_job}} in {{user_location}}. Happy Hunting! </center>   
+    <center style="margin-top: 0px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: -4px 4px #ef3550,
+                 -8px 8px #f48fb1,
+                 -12px 12px #7e57c2,
+                 -16px 16px #2196f3,
+                 -20px 20px #26c6da,
+                 -24px 24px #43a047,
+                 -28px 28px #eeff41,
+                 -32px 32px #f9a825,
+                 -36px 36px #ff5722;"> Wow! Here are the results for {{user_job}} in {{user_location}}. Happy Hunting! </center>   
     </p> <br> <br>
 
     <table>

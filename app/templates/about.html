@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 {% block header %}
@@ -6,13 +7,17 @@
 {% endblock %}
 
 {% block content %}
-<p>Hello,</p>
+<p>Hello.</p>
 
 <p>Do you need a resume? Do you not know how to make an engaging resume?!</p>
 
 <p>Well your in luck! </p>
 
 <p>We are here to help you create a resume! </p>
+
+<MARQUEE DIRECTION="down" BEHAVIOR="alternate" STYLE="width:700px; height:400px">
+  <MARQUEE BEHAVIOR="alternate">BEST RESUME EVER!</MARQUEE>
+  </MARQUEE>
 
 {% if name %}
   Hello, {{name}}!
