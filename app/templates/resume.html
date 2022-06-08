@@ -1,105 +1,73 @@
-<!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
 
 <div class="container">
   <div class="header">
     <div class="full-name">
-      <span class="first-name">John</span> 
-      <span class="last-name">Doe</span>
+      <span class="first-name">{{first_name}}</span> 
+      <span class="last-name">{{last_name}}</span>
     </div>
     <div class="contact-info">
       <span class="email">Email: </span>
-      <span class="email-val">john.doe@gmail.com</span>
+      <span class="email-val">{{email}}</span>
       <span class="separator"></span>
       <span class="phone">Phone: </span>
-      <span class="phone-val">111-222-3333</span>
-    </div>
-    
-    <div class="about">
-      <span class="position">Front-End Developer </span>
-      <span class="desc">
-        I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. 
-      </span>
+      <span class="phone-val">{{phone}}</span>
+      <span class="separator"></span>
+      <span class="location">Location: </span>
+      <span class="location">{{location}}</span>
     </div>
   </div>
-   <div class="details">
-    <div class="section">
-      <div class="section__title">Experience</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">KlowdBox</div>
-            <div class="addr">San Fr, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-                <div class="section__list-item">
-          <div class="left">
-            <div class="name">Akount</div>
-            <div class="addr">San Monica, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
 
-      </div>
-    </div>
-    <div class="section">
-      <div class="section__title">Education</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">Sample Institute of technology</div>
-            <div class="addr">San Fr, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">Akount</div>
-            <div class="addr">San Monica, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-
-      </div>
-      
-  </div>
      <div class="section">
-      <div class="section__title">Projects</div> 
+      <div class="section__title">Education</div> 
        <div class="section__list">
          <div class="section__list-item">
-           <div class="name">DSP</div>
-           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
+           <div class="name">{{school1}}</div>
+           <div class="text">{{school1startdate}}-{{school1enddate}}</div>
+           <div class="text">{{school1GPA}}</div>
+           <div class="text">{{school1Relevant_Courses}}</div>
+         </div>
+       </div>
+    </div>
+
+    <div class="section">
+      <div class="section__title">Experience</div> 
+       <div class="section__list">
+         <div class="section__list-item">
+           <div class="name">{{company1}}</div>
+           <div class="text">{{company1position}}</div>
+           <div class="text">{{company1startdate}}-{{company1enddate}}</div>
+           <div class="text">{{company1experience1}}</div>
+           <div class="text">{{company1experience2}}</div>
          </div>
          
          <div class="section__list-item">
-                    <div class="name">DSP</div>
-           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
+            <div class="name">company2</div>
+            <div class="text">{{company2position}}</div>
+            <div class="text">{{company2startdate}}-{{company2enddate}}</div>
+            <div class="text">{{company2experience1}}</div>
+            <div class="text">{{company2experience2}}</div>
            </div>
          </div>
        </div>
     </div>
+
+    <div class="section">
+      <div class="section__title">Achievements</div> 
+       <div class="section__list">
+         <div class="section__list-item">
+           <div class="name">{{Achievement1}}</div>
+           <div class="text">{{Achievement1description1}}</div>
+         </div>
+       </div>
+    </div>
+
      <div class="section">
        <div class="section__title">Skills</div>
        <div class="skills">
          <div class="skills__item">
            <div class="left"><div class="name">
-             Javascript
+            {{languages}}
              </div></div>
            <div class="right">
                           <input  id="ck1" type="checkbox" checked/>
@@ -122,7 +90,7 @@
        </div>
        <div class="skills__item">
            <div class="left"><div class="name">
-             CSS</div></div>
+            {{technical_skills}}</div></div>
            <div class="right">
                           <input  id="ck1" type="checkbox" checked/>
 
@@ -148,14 +116,14 @@
        </div>
        <div class="section__list">
          <div class="section__list-item">
-                  Football, programming.
+            {{interests}}
           </div>
        </div>
      </div>
      </div>
   </div>
-</div> -->
-
+</div>
+<!-- 
 <html>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 
@@ -269,4 +237,4 @@
 
 
 
-</html>
+</html> -->
