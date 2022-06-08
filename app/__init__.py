@@ -9,14 +9,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
+    """
+    Loads template for main page
+    """
     return render_template('main_better.html')
 
 @app.route('/form/', methods=['POST', 'GET'])
 def ask():
+    """
+    Loads page for user input
+    """
     if request.method == 'GET':
         return render_template('form.html')
-    else:
-        #function to store the imputs 
+    else: 
         try:
             return redirect(url_for('resume'))
         except:
@@ -24,6 +29,9 @@ def ask():
 
 @app.route('/resume/', methods=['POST'])
 def resume():
+    """
+    Loads information from user input into html template and outputs resume
+    """
     first_name=request.form['first_name']
     last_name=request.form['last_name']
     location=request.form['location']
@@ -70,7 +78,6 @@ def submit():
     if request.method == 'GET':
         return render_template('indeed_test.html')
 
-####### group exercise
 @app.route('/about/')
 def hello():
     return render_template('about.html')
