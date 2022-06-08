@@ -91,7 +91,6 @@ def submit():
         return render_template('indeed_test.html', user_job=user_job, user_location=user_location, current_url=current_url)
 
 
-
 @app.route('/about/')
 def hello():
     return render_template('about.html')
