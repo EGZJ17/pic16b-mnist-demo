@@ -75,7 +75,7 @@ def resume():
     company2=company2, company2position=company2position, company2startdate=company2startdate, company2enddate=company2enddate, company2experience1=company2experience1, company2experience2=company2experience2, company2experience3=company2experience3, 
     Achievement1=Achievement1, Achievement1description1=Achievement1description1, 
     languages=languages, technical_skills=technical_skills, interests=interests)
-    #abort(404)
+ 
 
 
 
@@ -102,16 +102,5 @@ def submit():
 def hello():
     return render_template('about.html')
 
-#######
-# Request object: https://flask.palletsprojects.com/en/2.1.x/api/#flask.Request
-@app.route('/submit-basic/', methods=['POST', 'GET'])
-def submit_basic():
-    pass
 
-# matplotlib: https://matplotlib.org/3.5.0/gallery/user_interfaces/web_application_server_sgskip.html
-# plotly: https://towardsdatascience.com/web-visualization-with-plotly-and-flask-3660abf9c946
-
-@app.route('/submit-advanced/', methods=['POST', 'GET'])
-def submit_advanced():
-    pass
 
