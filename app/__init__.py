@@ -5,17 +5,11 @@ import os
 import io
 import base64
 
-### stuff from last class
 app = Flask(__name__)
 
 @app.route('/')
 def main():
     return render_template('main_better.html')
-
-# @app.route('/form/')
-# def ask():
-#     return render_template('form.html')
-
 
 @app.route('/form/', methods=['POST', 'GET'])
 def ask():
@@ -27,7 +21,6 @@ def ask():
             return redirect(url_for('resume'))
         except:
             return render_template('form.html', error=True) 
-#######
 
 @app.route('/resume/', methods=['POST'])
 def resume():
