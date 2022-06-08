@@ -1,5 +1,23 @@
 {% extends 'base.html' %}
 
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+
 {% block header %}
   <h1>{% block title %} If You Need A Jumpstart on Your Job Search!{% endblock %}</h1>
 {% endblock %}
@@ -19,8 +37,105 @@
     </form>
 
     {% if current_url %}
-    <p> {{user_job}}, {{user_location}} </p>
+
+    <p>
+    <center> Wow! Here are the results for {{user_job}} in {{user_location}}. Happy Hunting! </center>   
+    </p> <br> <br>
+
+    <table>
+        <tr>
+          <th>Job Name</th>
+          <th>Company</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Link</th>
+        </tr>
+        <tr> 
+           <td>{{job1}}</td>
+           <td>{{company1}}</td>
+           <td>{{loc1}}</td>
+           <td>{{date1}}</td>
+           <td>{{desc1}}</td>
+           <td><a href="{{link1}}">Click Here!</a></td>
+        </tr>
+        <tr> 
+            <td>{{job2}}</td>
+            <td>{{company2}}</td>
+            <td>{{loc2}}</td>
+            <td>{{date2}}</td>
+            <td>{{desc2}}</td>
+            <td><a href="{{link2}}">Click Here!</a></td>
+         </tr>
+         <tr> 
+            <td>{{job3}}</td>
+            <td>{{company3}}</td>
+            <td>{{loc3}}</td>
+            <td>{{date3}}</td>
+            <td>{{desc3}}</td>
+            <td><a href="{{link3}}">Click Here!</a></td>
+         </tr>
+         <tr> 
+            <td>{{job4}}</td>
+            <td>{{company4}}</td>
+            <td>{{loc4}}</td>
+            <td>{{date4}}</td>
+            <td>{{desc4}}</td>
+            <td><a href="{{link4}}">Click Here!</a></td>
+         </tr>
+         <tr> 
+            <td>{{job5}}</td>
+            <td>{{company5}}</td>
+            <td>{{loc5}}</td>
+            <td>{{date5}}</td>
+            <td>{{desc5}}</td>
+            <td><a href="{{link5}}">Click Here!</a></td>
+         </tr>
+         <tr> 
+            <td>{{job6}}</td>
+            <td>{{company6}}</td>
+            <td>{{loc6}}</td>
+            <td>{{date6}}</td>
+            <td>{{desc6}}</td>
+            <td><a href="{{link6}}">Click Here!</a></td>
+         </tr>
+         <tr> 
+            <td>{{job7}}</td>
+            <td>{{company7}}</td>
+            <td>{{loc7}}</td>
+            <td>{{date7}}</td>
+            <td>{{desc7}}</td>
+            <td><a href="{{link7}}">Click Here!</a></td>
+         </tr>
+         <tr> 
+            <td>{{job8}}</td>
+            <td>{{company8}}</td>
+            <td>{{loc8}}</td>
+            <td>{{date8}}</td>
+            <td>{{desc8}}</td>
+            <td><a href="{{link8}}">Click Here!</a></td>
+         </tr>
+         <tr> 
+            <td>{{job9}}</td>
+            <td>{{company9}}</td>
+            <td>{{loc9}}</td>
+            <td>{{date9}}</td>
+            <td>{{desc9}}</td>
+            <td><a href="{{link9}}">Click Here!</a></td>
+         </tr>
+         <tr> 
+            <td>{{job10}}</td>
+            <td>{{company10}}</td>
+            <td>{{loc10}}</td>
+            <td>{{date10}}</td>
+            <td>{{desc10}}</td>
+            <td><a href="{{link10}}">Click Here!</a></td>
+         </tr>
+      </table>
     {% endif %}
 
+    {% if error %} 
+    <p> There was no jobs found for your combination. Please check your spelling!</p>
+    {% endif %}
 
 {% endblock %}
