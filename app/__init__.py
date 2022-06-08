@@ -1,7 +1,5 @@
 from flask import Flask, g, render_template, request
 from flask import redirect, url_for, abort
-
-from selenium import webdriver
 import os
 
 import io
@@ -75,19 +73,11 @@ def resume():
     company2=company2, company2position=company2position, company2startdate=company2startdate, company2enddate=company2enddate, company2experience1=company2experience1, company2experience2=company2experience2, company2experience3=company2experience3, 
     Achievement1=Achievement1, Achievement1description1=Achievement1description1, 
     languages=languages, technical_skills=technical_skills, interests=interests)
- 
-
-
 
 @app.route('/indeed_test/', methods=['POST', 'GET'])
 def submit():
     if request.method == 'GET':
         return render_template('indeed_test.html')
-    else:
-        try:
-            return render_template('indeed_test.html', source=source)
-        except:
-            return render_template('indeed_test.html', error=True)
 
 ####### group exercise
 @app.route('/about/')
