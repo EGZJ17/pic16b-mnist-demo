@@ -14,17 +14,21 @@ app = Flask(__name__)
 def main():
     return render_template('main_better.html')
 
-
-@app.route('/form/', methods=['POST', 'GET'])
+@app.route('/form/')
 def ask():
-    if request.method == 'GET':
-        return render_template('form.html')
-    else:
-        #function to store the imputs 
-        try:
-            return render_template('form.html', thanks=True)
-        except:
-            return render_template('form.html', error=True) 
+    return render_template('form.html')
+
+
+# @app.route('/form/', methods=['POST', 'GET'])
+# def ask():
+#     if request.method == 'GET':
+#         return render_template('form.html')
+#     else:
+#         #function to store the imputs 
+#         try:
+#             return render_template('form.html', thanks=True)
+#         except:
+#             return render_template('form.html', error=True) 
 #######
 
 @app.route('/resume/', methods=['POST'])
