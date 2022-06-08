@@ -33,7 +33,7 @@ def ask():
 
 @app.route('/resume/', methods=['POST'])
 def resume():
-    first_name=request.form['request.form']
+    first_name=request.form['first_name']
     last_name=request.form['last_name']
     location=request.form['location']
     phone=request.form['phone']
@@ -90,11 +90,6 @@ def resume():
     return render_template('resume.html', first_name=first_name, last_name=last_name, location=location, phone=phone, email=email, school1=school1, school1startdate=school1startdate, school1enddate=school1enddate, school1GPA=school1GPA, school1Relevant_Courses=school1Relevant_Courses, school2=school2, school2startdate=school2startdate, school2enddate=school2enddate, school2GPA=school2GPA, school2Relevant_Courses=school2Relevant_Courses, company1=company1, company1position=company1position, company1startdate=company1startdate, company1enddate=company1enddate, company1experience1=company1experience1, company1experience2=company1experience2, company1experience3=company1experience3, company2=company2, company2position=company2position, company2startdate=company2startdate, company2enddate=company2enddate, company2experience1=company2experience1, company2experience2=company2experience2, company2experience3=company2experience3, company3=company3, company3position=company3position, company3startdate=company3startdate, company3enddate=company3enddate, company3experience1=company3experience1, company3experience2=company3experience2, company3experience3=company3experience3, Achievement1=Achievement1, Achievement1description1=Achievement1description1, Achievement1description2=Achievement1description2, Achievement2=Achievement2, Achievement2description1=Achievement2description1, Achievement2description2=Achievement2description2, languages=languages, technical_skills=technical_skills, interests=interests)
     #abort(404)
 
-@app.route('/result',methods = ['POST', 'GET'])
-def result():
-   if request.method == 'POST':
-      result = request.form
-      return render_template("result.html",result = result)
 
 
 @app.route('/indeed_test/', methods=['POST', 'GET'])
