@@ -1,6 +1,10 @@
 from flask import Flask, g, render_template, request
 from flask import redirect, url_for, abort
+
+from bs4 import BeautifulSoup
+import pandas as pd
 import os
+import requests
 
 import io
 import base64
@@ -69,6 +73,16 @@ def resume():
 def submit():
     if request.method == 'GET':
         return render_template('indeed_test.html')
+    else:
+        user_job = request.form['job']
+        user_location = request.form['location']
+        user_job = user_job.replace(" ", "%20")
+        user_location = user_location.replace(" ", "%20")
+        current_url = f"https://www.indeed.com/jobs?q={user_job}&l={user_location}"
+
+        return render_template('indeed_test.html', user_job=user_job, user_location=user_location, current_url=current_url)
+
+
 
 ####### group exercise
 @app.route('/about/')
