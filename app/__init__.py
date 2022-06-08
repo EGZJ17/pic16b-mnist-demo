@@ -22,7 +22,7 @@ def ask():
     else:
         #function to store the imputs 
         try:
-            return redirect(url_for('resume'))
+            return render_template('form.html', thanks=True)
         except:
             return render_template('form.html', error=True) 
 #######
